@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import PageContainer from "../layout/PageContainer"
 import { Separator } from "@/components/ui/separator"
+import { Download } from "lucide-react"
 
 export default function Introduction() {
   return (
@@ -48,6 +49,7 @@ export default function Introduction() {
 
               <Button size="lg" variant="outline" asChild>
                 <a href="/cv.pdf" download>
+                  <Download className="mr-2 h-4 w-4" />
                   Unduh CV
                 </a>
               </Button>

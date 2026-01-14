@@ -65,7 +65,7 @@ export default function Introduction() {
 
               {/* image */}
               <img
-                src="../../../public/risti_sabila.jpg"
+                src="../../../risti_sabila.jpg"
                 alt="Profile"
                 className="object-cover w-full h-full"
               />

@@ -40,7 +40,7 @@ export default function Introduction() {
                 size="lg"
                 onClick={() => {
                   document
-                    .getElementById("next-section")
+                    .getElementById("project")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }}
               >
@@ -48,7 +48,7 @@ export default function Introduction() {
                 Lihat Karya
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="/cv.pdf" download>
+                <a href="./../../../cv_ats.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Unduh CV
                 </a>

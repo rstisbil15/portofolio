@@ -1,20 +1,54 @@
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Sun } from "lucide-react"
+import { useState, useEffect } from "react"
 
 const navItems = [
-  'Beranda',
-  'Tentang',
-  'Proyek',
-  'Kontak',
+  { label: 'Beranda', id: 'beranda' },
+  { label: 'Tentang', id: 'tentang' },
+  { label: 'Proyek', id: 'proyek' },
+  { label: 'Kontak', id: 'kontak' },
 ]
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState('beranda')
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => item.id)
+      const scrollPosition = window.scrollY + 100
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   return (
     <header className="w-full backdrop-blur-3xl bg-white/60 shadow-[0_1px_10px_rgba(0,0,0,0.08)] sticky top-0 z-50">
       {/* container */}
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <div className="font-bold text-lg">
+        <div className="font-bold text-lg cursor-pointer" onClick={() => scrollToSection('beranda')}>
           Portofolio
         </div>
 
@@ -22,11 +56,19 @@ export default function Navbar() {
         <nav className="flex items-center gap-6">
           {navItems.map((item) => (
             <Button
-              key={item}
+              key={item.id}
               variant="ghost"
-              className="text-sm font-normal hover:cursor-pointer"
+              onClick={() => scrollToSection(item.id)}
+              className={`text-sm font-normal hover:cursor-pointer transition-colors relative ${
+                activeSection === item.id 
+                  ? 'text-fuchsia-500 font-medium' 
+                  : 'hover:text-fuchsia-400'
+              }`}
             >
-              {item}
+              {item.label}
+              {activeSection === item.id && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-fuchsia-500 rounded-full" />
+              )}
             </Button>
           ))}
 

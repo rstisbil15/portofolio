@@ -5,35 +5,35 @@ import { easeOut, motion } from "framer-motion";
 const project1 = {
   title: "BaleTani",
   description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
-  image: "../../../baletani.jpeg",
+  image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project2 = {
   title: "BaleTani",
   description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
-  image: "../../../baletani.jpeg",
+  image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project3 = {
   title: "BaleTani",
   description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
-  image: "../../../baletani.jpeg",
+  image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project4 = {
   title: "BaleTani",
   description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
-  image: "../../../baletani.jpeg",
+  image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project5 = {
   title: "BaleTani",
   description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
-  image: "../../../baletani.jpeg",
+  image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 

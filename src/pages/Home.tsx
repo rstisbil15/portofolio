@@ -7,13 +7,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className=""> {/* background div */}
+      <div id="beranda" className=""> {/* background div */}
         <Introduction />
       </div>
-      <AboutMe />
-      <Projects />
-      <div className="p-6">
-        <h1 className="text-2xl font-bold">Home Page</h1>
+      <div id="tentang">
+        <AboutMe />
+      </div>
+      <div id="proyek">
+        <Projects />
       </div>
     </>
   )

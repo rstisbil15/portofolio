@@ -30,8 +30,8 @@ export default function Introduction() {
 
             {/* description */}
             <p className="text-sm sm:text-base text-muted-foreground max-w-xl mb-6 md:mb-8">
-              Hi! I'm a Web Developer who enjoys building clean, responsive, and modern websites.
-              Curious about tech, passionate about the web, and always excited to learn something new 🚀
+              Hai! Saya seorang Web Developer yang suka membangun website yang bersih, responsif, dan modern. 
+              Tertarik dengan teknologi, antusias di dunia web, dan selalu semangat untuk belajar hal baru 🚀
             </p>
 
             {/* CTA */}

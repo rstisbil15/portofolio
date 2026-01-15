@@ -107,7 +107,7 @@ export default function AboutMe() {
                 },
               },
             }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+            className="flex flex-wrap justify-center gap-4"
           >
             {techStack.map((tech) => (
               <motion.div

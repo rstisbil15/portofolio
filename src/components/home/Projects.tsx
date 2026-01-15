@@ -72,7 +72,7 @@ const itemVariants = {
 
 export default function Projects() {
   return (
-    <section className="py-8 md:py-12">
+    <section id="project" className="py-8 md:py-12">
       <PageContainer>
         {/* project title and desc */}
         <motion.div

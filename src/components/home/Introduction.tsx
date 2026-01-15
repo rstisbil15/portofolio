@@ -7,7 +7,7 @@ import { Download, ArrowDown } from "lucide-react"
 export default function Introduction() {
   return (
     <PageContainer>
-      <section className="min-h-[calc(100vh-4rem)] flex items-center py-8 md:py-0">
+      <section id="intro" className="min-h-[calc(100vh-4rem)] flex items-center py-8 md:py-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full">
           {/* left section */}
           <motion.div

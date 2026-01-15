@@ -2,16 +2,35 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Sun } from "lucide-react"
 import { useState, useEffect } from "react"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose
+} from "@/components/ui/sheet"
+import { Menu } from "lucide-react"
 
 const navItems = [
-  { label: 'Beranda', id: 'beranda' },
-  { label: 'Tentang', id: 'tentang' },
-  { label: 'Proyek', id: 'proyek' },
-  { label: 'Kontak', id: 'kontak' },
+  {
+    label: 'Beranda',
+    id: 'intro'
+  },
+  {
+    label: 'Tentang',
+    id: 'about'
+  },
+  {
+    label: 'Proyek',
+    id: 'project'
+  },
+  {
+    label: 'Kontak',
+    id: 'contact'
+  },
 ]
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState('beranda')
+  const [activeSection, setActiveSection] = useState('intro')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,22 +67,21 @@ export default function Navbar() {
     <header className="w-full backdrop-blur-3xl bg-white/60 shadow-[0_1px_10px_rgba(0,0,0,0.08)] sticky top-0 z-50">
       {/* container */}
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <div className="font-bold text-lg cursor-pointer" onClick={() => scrollToSection('beranda')}>
+        <div className="font-bold text-lg cursor-pointer" onClick={() => scrollToSection('intro')}>
           Portofolio
         </div>
 
-        {/* tabs */}
-        <nav className="flex items-center gap-6">
+        {/* nav desktop */}
+        <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Button
               key={item.id}
               variant="ghost"
               onClick={() => scrollToSection(item.id)}
-              className={`text-sm font-normal hover:cursor-pointer transition-colors relative ${
-                activeSection === item.id 
-                  ? 'text-fuchsia-500 font-medium' 
+              className={`text-sm font-normal hover:cursor-pointer transition-colors relative ${activeSection === item.id
+                  ? 'text-fuchsia-500 font-medium'
                   : 'hover:text-fuchsia-400'
-              }`}
+                }`}
             >
               {item.label}
               {activeSection === item.id && (
@@ -86,6 +104,56 @@ export default function Navbar() {
             </Button>
           </div>
         </nav>
+
+        {/* nav mobile */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent
+              side="right"
+              className="w-[280px] sm:w-[320px] backdrop-blur-xl bg-white/90"
+            >
+              <div className="flex flex-col gap-6 mt-8">
+                {/* menu items */}
+                <div className="flex flex-col gap-2">
+                  {navItems.map((item) => (
+                    <SheetClose asChild key={item.id}>
+                      <Button
+                        variant="ghost"
+                        onClick={() => scrollToSection(item.id)}
+                        className={`justify-start text-base ${activeSection === item.id
+                            ? "text-fuchsia-500 font-medium"
+                            : ""
+                          }`}
+                      >
+                        {item.label}
+                      </Button>
+                    </SheetClose>
+                  ))}
+                </div>
+
+                <Separator />
+
+                {/* settings */}
+                <div className="flex flex-col gap-4 px-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Bahasa</span>
+                    <span className="text-sm">ID</span>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">Tema</span>
+                    <Sun className="h-4 w-4" />
+                  </div>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   )

@@ -1,6 +1,7 @@
 import PageContainer from "@/components/layout/PageContainer"
 import { Card } from "@/components/ui/card"
 import {
+  SiHtml5,
   SiVuedotjs,
   SiCss3,
   SiJavascript,
@@ -20,12 +21,13 @@ import { VscGraphLine } from "react-icons/vsc"
 import { motion } from "framer-motion"
 
 const techStack = [
-  { name: "Vue", icon: SiVuedotjs, color: "text-green-500" },
+  { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
   { name: "CSS", icon: SiCss3, color: "text-blue-500" },
   { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
   { name: "PHP", icon: SiPhp, color: "text-indigo-500" },
   { name: "Laravel", icon: SiLaravel, color: "text-red-500" },
   { name: "React", icon: SiReact, color: "text-cyan-500" },
+  { name: "Vue", icon: SiVuedotjs, color: "text-green-500" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
   { name: "Figma", icon: SiFigma, color: "text-pink-500" },
   { name: "Git", icon: SiGit, color: "text-orange-600" },
@@ -39,7 +41,7 @@ const techStack = [
 
 export default function AboutMe() {
   return (
-    <section className="py-12">
+    <section id="about" className="py-12">
       <PageContainer>
         <motion.div
           initial={{ opacity: 0, y: 24 }}

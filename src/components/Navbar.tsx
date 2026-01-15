@@ -2,13 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Sun } from "lucide-react"
 import { useState, useEffect } from "react"
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose
-} from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 
 const navItems = [
   {
@@ -31,18 +26,28 @@ const navItems = [
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('intro')
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => item.id)
       const scrollPosition = window.scrollY + 100
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
 
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId)
+      if (windowHeight + window.scrollY >= documentHeight - 5) {
+        setActiveSection("contact")
+        return
+      }
+
+      for (const item of navItems) {
+        const element = document.getElementById(item.id)
         if (element) {
           const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(sectionId)
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(item.id)
             break
           }
         }
@@ -106,53 +111,73 @@ export default function Navbar() {
         </nav>
 
         {/* nav mobile */}
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-[280px] sm:w-[320px] backdrop-blur-xl bg-white/90"
-            >
-              <div className="flex flex-col gap-6 mt-8">
-                {/* menu items */}
+        <div className="md:hidden relative">
+          {/* hamburger button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setMobileOpen((prev) => !prev)}
+          >
+            <Menu className="h-5 w-5" />
+          </Button>
+
+          {/* dropdown */}
+          <AnimatePresence>
+            {mobileOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className="
+                  absolute
+                  right-0
+                  mt-3
+                  w-[260px]
+                  rounded-2xl
+                  bg-white/95
+                  backdrop-blur-xl
+                  shadow-xl
+                  p-4
+                  z-50
+                "
+              >
                 <div className="flex flex-col gap-2">
                   {navItems.map((item) => (
-                    <SheetClose asChild key={item.id}>
-                      <Button
-                        variant="ghost"
-                        onClick={() => scrollToSection(item.id)}
-                        className={`justify-start text-base ${activeSection === item.id
-                            ? "text-fuchsia-500 font-medium"
-                            : ""
-                          }`}
-                      >
-                        {item.label}
-                      </Button>
-                    </SheetClose>
+                    <Button
+                      key={item.id}
+                      variant="ghost"
+                      onClick={() => {
+                        setMobileOpen(false)
+                        scrollToSection(item.id)
+                      }}
+                      className={`justify-start text-base ${
+                        activeSection === item.id
+                          ? "text-fuchsia-500 font-medium"
+                          : ""
+                      }`}
+                    >
+                      {item.label}
+                    </Button>
                   ))}
                 </div>
 
-                <Separator />
+                <Separator className="my-3" />
 
                 {/* settings */}
-                <div className="flex flex-col gap-4 px-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium">Bahasa</span>
-                    <span className="text-sm">ID</span>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center justify-between px-2 text-sm">
+                    <span>Bahasa</span>
+                    <span>ID</span>
                   </div>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium">Tema</span>
+                  <div className="flex items-center justify-between px-2 text-sm">
+                    <span>Tema</span>
                     <Sun className="h-4 w-4" />
                   </div>
                 </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </header>

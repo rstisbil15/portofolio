@@ -72,7 +72,7 @@ const itemVariants = {
 
 export default function Projects() {
   return (
-    <section className="py-12">
+    <section className="py-8 md:py-12">
       <PageContainer>
         {/* project title and desc */}
         <motion.div
@@ -80,12 +80,12 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-3xl space-y-3 mb-8"
+          className="max-w-3xl space-y-2 md:space-y-3 mb-6 md:mb-8"
         >
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
             Karya Pilihan
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             Eksplorasi karya terbaik yang pernah saya bangun sebagai solusi digital
             dengan pendekatan modern, terstruktur, dan berorientasi pada pengguna.
           </p>
@@ -110,10 +110,10 @@ export default function Projects() {
             >
               <Card
                 key={index}
-                className="overflow-hidden transition-shadow duration-300 hover:shadow-md !pt-0"
+                className="overflow-hidden transition-shadow duration-300 hover:shadow-md !pt-0 h-full"
               >
                 {/* project image */}
-                <div className="h-40 bg-muted overflow-hidden">
+                <div className="h-36 sm:h-40 md:h-44 bg-muted overflow-hidden">
                   <motion.img
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4, ease: "easeOut" }}
@@ -123,8 +123,8 @@ export default function Projects() {
                   />
                 </div>
                 {/* project content */}
-                <div className="px-4 space-y-3">
-                  <h3 className="font-semibold text-lg">
+                <div className="p-4 sm:p-5 space-y-2 sm:space-y-3">
+                  <h3 className="font-semibold text-base sm:text-lg">
                     {project.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">

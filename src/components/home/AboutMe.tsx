@@ -1,7 +1,7 @@
 import PageContainer from "@/components/layout/PageContainer"
 import { Card } from "@/components/ui/card"
 import {
-  SiHtml5,
+  SiVuedotjs,
   SiCss3,
   SiJavascript,
   SiPhp,
@@ -13,11 +13,14 @@ import {
   SiMysql,
   SiTailwindcss,
   SiBootstrap,
+  SiPostman,
+  SiCypress,
 } from "react-icons/si"
+import { TbBrandK6 } from "react-icons/tb"
 import { motion } from "framer-motion"
 
 const techStack = [
-  { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
+  { name: "Vue", icon: SiVuedotjs, color: "text-green-500" },
   { name: "CSS", icon: SiCss3, color: "text-blue-500" },
   { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
   { name: "PHP", icon: SiPhp, color: "text-indigo-500" },
@@ -29,6 +32,9 @@ const techStack = [
   { name: "MySQL", icon: SiMysql, color: "text-blue-600" },
   { name: "Tailwind", icon: SiTailwindcss, color: "text-sky-500" },
   { name: "Bootstrap", icon: SiBootstrap, color: "text-purple-600" },
+  { name: "Postman", icon: SiPostman, color: "text-orange-500" },
+  { name: "K6", icon: TbBrandK6, color: "text-purple-500" },
+  { name: "Cypress", icon: SiCypress, color: "text-emerald-600" },
 ]
 
 export default function AboutMe() {

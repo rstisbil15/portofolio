@@ -7,8 +7,8 @@ import { Download, ArrowDown } from "lucide-react"
 export default function Introduction() {
   return (
     <PageContainer>
-      <section className="min-h-[calc(100vh-4rem)] flex items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+      <section className="min-h-[calc(100vh-4rem)] flex items-center py-8 md:py-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full">
           {/* left section */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -23,15 +23,15 @@ export default function Introduction() {
             </span>
 
             {/* title */}
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
               Hello, I'm
               <span className="text-fuchsia-400 [text-shadow:2px_1px_2px_rgba(255,102,230,0.7)]"><br />Risti Sabila.</span>
             </h1>
 
             {/* description */}
-            <p className="text-muted-foreground max-w-xl mb-8">
-              Menggabungkan logika teknis dan kreativitas desain untuk
-              menciptakan produk digital yang berdampak.
+            <p className="text-sm sm:text-base text-muted-foreground max-w-xl mb-6 md:mb-8">
+              Hi! I'm a Web Developer who enjoys building clean, responsive, and modern websites.
+              Curious about tech, passionate about the web, and always excited to learn something new 🚀
             </p>
 
             {/* CTA */}
@@ -61,9 +61,9 @@ export default function Introduction() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="flex justify-end items-center"
+            className="flex justify-center md:justify-end items-center"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-lg bg-muted w-[260px] h-[360px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-lg bg-muted w-full max-w-[280px] sm:max-w-[300px] md:w-[260px] aspect-[13/18]">
 
               {/* image */}
               <img
@@ -73,9 +73,9 @@ export default function Introduction() {
               />
 
               {/* status badge */}
-              <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur rounded-xl px-4 py-2 flex items-center gap-2 shadow">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-background/90 backdrop-blur rounded-xl px-3 py-2 sm:px-4 flex items-center gap-2 shadow">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                <span className="text-sm font-medium">
+                <span className="text-xs sm:text-sm font-medium">
                   Ready to Collaborate
                 </span>
               </div>

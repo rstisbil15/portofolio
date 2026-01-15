@@ -16,7 +16,7 @@ import {
   SiPostman,
   SiCypress,
 } from "react-icons/si"
-import { TbBrandK6 } from "react-icons/tb"
+import { VscGraphLine } from "react-icons/vsc"
 import { motion } from "framer-motion"
 
 const techStack = [
@@ -33,7 +33,7 @@ const techStack = [
   { name: "Tailwind", icon: SiTailwindcss, color: "text-sky-500" },
   { name: "Bootstrap", icon: SiBootstrap, color: "text-purple-600" },
   { name: "Postman", icon: SiPostman, color: "text-orange-500" },
-  { name: "K6", icon: TbBrandK6, color: "text-purple-500" },
+  { name: "K6", icon: VscGraphLine, color: "text-purple-500" },
   { name: "Cypress", icon: SiCypress, color: "text-emerald-600" },
 ]
 

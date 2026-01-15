@@ -3,8 +3,13 @@ import { Button } from "@/components/ui/button"
 import PageContainer from "../layout/PageContainer"
 import { Separator } from "@/components/ui/separator"
 import { Download, ArrowDown } from "lucide-react"
+import { useTranslation } from "react-i18next"
+import { AnimatedText } from "@/components/animation/AnimatedText"
+import { ScrambleTypewriter } from "@/components/animation/ScrambleTypewritter"
 
 export default function Introduction() {
+  const { t } = useTranslation()
+
   return (
     <PageContainer>
       <section id="intro" className="min-h-[calc(100vh-4rem)] flex items-center py-8 md:py-0">
@@ -24,14 +29,19 @@ export default function Introduction() {
 
             {/* title */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-              Hello, I'm
-              <span className="text-fuchsia-400 [text-shadow:2px_1px_2px_rgba(255,102,230,0.7)]"><br />Risti Sabila.</span>
+              <AnimatedText text={t("intro.greeting")} />
+              <span className="text-fuchsia-400 [text-shadow:2px_1px_2px_rgba(255,102,230,0.7)]">
+                <br />
+                <ScrambleTypewriter
+                  words={['Risti', 'Sabila.']}
+                  idleTime={5000}
+                />
+              </span>
             </h1>
 
             {/* description */}
             <p className="text-sm sm:text-base text-muted-foreground max-w-xl mb-6 md:mb-8">
-              Hai! Saya seorang Web Developer yang suka membangun website yang bersih, responsif, dan modern. 
-              Tertarik dengan teknologi, antusias di dunia web, dan selalu semangat untuk belajar hal baru 🚀
+              <AnimatedText text={t("intro.desc")} />
             </p>
 
             {/* CTA */}
@@ -45,12 +55,12 @@ export default function Introduction() {
                 }}
               >
                 <ArrowDown className="h-4 w-4" />
-                Lihat Karya
+                <AnimatedText text={t("intro.projectButton")} />
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="./../../../cv_ats.pdf" download>
+                <a href="./../../../CV_RistiSabila.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
-                  Unduh CV
+                  <AnimatedText text={t("intro.cvButton")} />
                 </a>
               </Button>
             </div>
@@ -76,7 +86,7 @@ export default function Introduction() {
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-background/90 backdrop-blur rounded-xl px-3 py-2 sm:px-4 flex items-center gap-2 shadow">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
                 <span className="text-xs sm:text-sm font-medium">
-                  Ready to Collaborate
+                  <AnimatedText text={t("intro.badge")} />
                 </span>
               </div>
             </div>

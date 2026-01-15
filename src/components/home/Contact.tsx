@@ -1,8 +1,12 @@
 import PageContainer from "@/components/layout/PageContainer";
 import { Rocket, Mail } from "lucide-react"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next";
+import { AnimatedText } from "@/components/animation/AnimatedText";
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
     <section id="contact" className="my-12">
       <PageContainer>
@@ -73,7 +77,7 @@ export default function Contact() {
               viewport={{ once: true }}
               className="text-2xl font-bold text-white sm:text-3xl"
             >
-              Ingin Berkolaborasi?
+              <AnimatedText text={t("contact.title")} />
             </motion.h2>
 
             {/* description */}
@@ -84,8 +88,7 @@ export default function Contact() {
               viewport={{ once: true }}
               className="mx-auto mt-3 max-w-xl text-sm text-white/90 sm:text-base"
             >
-              Mari wujudkan proyek digital Anda bersama saya. Hubungi sekarang
-              untuk diskusi lebih lanjut.
+              <AnimatedText text={t("contact.cta")} />
             </motion.p>
 
             {/* button */}
@@ -118,7 +121,7 @@ export default function Contact() {
                 "
               >
                 <Mail className="h-4 w-4" />
-                Hubungi Saya
+                <AnimatedText text={t("contact.mailButton")} />
               </motion.a>
             </motion.div>
           </div>

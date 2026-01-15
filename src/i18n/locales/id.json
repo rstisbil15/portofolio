@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "intro": "Beranda",
+    "about": "Tentang",
+    "project": "Proyek",
+    "contact": "Kontak"
+  },
+  "settings": {
+    "language": "Bahasa",
+    "theme": "Tema"
+  },
+  "intro": {
+    "greeting": "Halo, Saya",
+    "desc": "Hai! Saya seorang Web Developer yang suka membangun website yang bersih, responsif, dan modern. Tertarik dengan teknologi, antusias di dunia web, dan selalu semangat untuk belajar hal baru 🚀",
+    "projectButton": "Lihat Karya",
+    "cvButton": "Unduh CV",
+    "badge": "Siap untuk Berkolaborasi"
+  },
+  "aboutMe": {
+    "title": "Tentang Saya",
+    "desc1": "Saya adalah seorang Web Developer yang berfokus pada pengembangan aplikasi web modern dengan pendekatan yang terstruktur, efisien, dan berorientasi pada pengguna. Memiliki ketertarikan kuat pada penggabungan logika pemrograman, desain UI/UX, serta pengolahan data untuk menciptakan solusi digital yang tidak hanya berfungsi dengan baik, tetapi juga nyaman digunakan.",
+    "desc2": "Dalam proses pengembangan, saya terbiasa membangun antarmuka yang responsif, scalable, dan mudah dipelihara, serta mengoptimalkan performa aplikasi agar tetap cepat dan stabil. Saya senang mengeksplorasi teknologi baru dan terus meningkatkan kualitas produk melalui praktik terbaik, kolaborasi, dan evaluasi berkelanjutan.",
+    "experience": "Bulan Pengalaman",
+    "techstack": "KEAHLIAN TEKNIS"
+  },
+  "projects": {
+    "title": "Karya Pilihan",
+    "desc": "Eksplorasi karya terbaik yang pernah saya bangun sebagai solusi digital dengan pendekatan modern, terstruktur, dan berorientasi pada pengguna.",
+    "project1" : {
+      "title": "BaleTani",
+      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
+    },
+    "project2" : {
+      "title": "BaleTani",
+      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
+    },
+    "project3" : {
+      "title": "BaleTani",
+      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
+    },
+    "project4" : {
+      "title": "BaleTani",
+      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
+    },
+    "project5" : {
+      "title": "BaleTani",
+      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
+    }
+  },
+  "contact": {
+    "title": "Ingin Berkolaborasi?",
+    "cta": "Mari wujudkan proyek digital Anda bersama saya. Hubungi sekarang untuk diskusi lebih lanjut.",
+    "mailButton": "Hubungi Saya"
+  }
+}

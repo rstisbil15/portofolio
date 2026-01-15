@@ -19,6 +19,8 @@ import {
 } from "react-icons/si"
 import { VscGraphLine } from "react-icons/vsc"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
+import { AnimatedText } from "@/components/animation/AnimatedText"
 
 const techStack = [
   { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
@@ -40,6 +42,8 @@ const techStack = [
 ]
 
 export default function AboutMe() {
+  const { t } = useTranslation()
+
   return (
     <section id="about" className="py-12">
       <PageContainer>
@@ -52,22 +56,13 @@ export default function AboutMe() {
         >
           {/* title */}
           <h2 className="text-3xl md:text-4xl font-bold">
-            Tentang Saya
+            <AnimatedText text={t("aboutMe.title")} />
           </h2>
           {/* description */}
           <p className="text-muted-foreground leading-relaxed">
-            Saya adalah seorang Web Developer yang berfokus pada pengembangan
-            aplikasi web modern dengan pendekatan yang terstruktur, efisien,
-            dan berorientasi pada pengguna. Memiliki ketertarikan kuat pada
-            penggabungan logika pemrograman, desain UI/UX, serta pengolahan data
-            untuk menciptakan solusi digital yang tidak hanya berfungsi dengan
-            baik, tetapi juga nyaman digunakan.
+            <AnimatedText text={t("aboutMe.desc1")} />
             <br /><br />
-            Dalam proses pengembangan, saya terbiasa membangun antarmuka yang
-            responsif, scalable, dan mudah dipelihara, serta mengoptimalkan
-            performa aplikasi agar tetap cepat dan stabil. Saya senang
-            mengeksplorasi teknologi baru dan terus meningkatkan kualitas
-            produk melalui praktik terbaik, kolaborasi, dan evaluasi berkelanjutan.
+            <AnimatedText text={t("aboutMe.desc2")} />
           </p>
           {/* experience */}
           <motion.div
@@ -80,7 +75,7 @@ export default function AboutMe() {
             <Card className="px-10 py-6 text-center">
               <p className="text-3xl font-bold text-primary">1+</p>
               <p className="text-sm text-muted-foreground mt-1">
-                Bulan Pengalaman
+                <AnimatedText text={t("aboutMe.experience")} />
               </p>
             </Card>
           </motion.div>
@@ -94,7 +89,7 @@ export default function AboutMe() {
             transition={{ duration: 0.4 }}
             className="text-center text-sm font-semibold tracking-widest text-muted-foreground mb-10"
           >
-            KEAHLIAN TEKNIS
+            <AnimatedText text={t("aboutMe.techstack")} />
           </motion.h3>
 
           <motion.div

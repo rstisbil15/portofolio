@@ -4,22 +4,30 @@ import { Sun } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Menu } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTranslation } from "react-i18next"
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu"
+import { AnimatedText } from "@/components/animation/AnimatedText"
 
 const navItems = [
   {
-    label: 'Beranda',
+    label: 'nav.intro',
     id: 'intro'
   },
   {
-    label: 'Tentang',
+    label: 'nav.about',
     id: 'about'
   },
   {
-    label: 'Proyek',
+    label: 'nav.project',
     id: 'project'
   },
   {
-    label: 'Kontak',
+    label: 'nav.contact',
     id: 'contact'
   },
 ]
@@ -27,6 +35,7 @@ const navItems = [
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('intro')
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { t, i18n } = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +97,7 @@ export default function Navbar() {
                   : 'hover:text-fuchsia-400'
                 }`}
             >
-              {item.label}
+              <AnimatedText text={t(item.label)} />
               {activeSection === item.id && (
                 <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-fuchsia-500 rounded-full" />
               )}
@@ -100,7 +109,29 @@ export default function Navbar() {
 
           {/* settings */}
           <div className="flex items-center gap-3">
-            <span className="font-sm font-medium">ID</span>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost">
+                  <AnimatedText text={i18n.language.toUpperCase()} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-4" align="start">
+                <DropdownMenuItem
+                  onClick={() => i18n.changeLanguage(
+                    i18n.language === "en" ? "id" : "id"
+                  )}
+                >
+                  ID
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => i18n.changeLanguage(
+                    i18n.language === "id" ? "en" : "en"
+                  )}
+                >
+                  EN
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button
               variant="ghost"
               size="icon"
@@ -157,7 +188,7 @@ export default function Navbar() {
                           : ""
                       }`}
                     >
-                      {item.label}
+                      <AnimatedText text={t(item.label)} />
                     </Button>
                   ))}
                 </div>
@@ -165,15 +196,24 @@ export default function Navbar() {
                 <Separator className="my-3" />
 
                 {/* settings */}
-                <div className="flex flex-col gap-4">
-                  <div className="flex items-center justify-between px-2 text-sm">
-                    <span>Bahasa</span>
-                    <span>ID</span>
-                  </div>
-                  <div className="flex items-center justify-between px-2 text-sm">
-                    <span>Tema</span>
+                <div className="flex flex-col gap-1">
+                  <Button
+                    variant="ghost"
+                    onClick={() => i18n.changeLanguage(
+                      i18n.language === "id" ? "en" : "id"
+                    )}
+                    className="flex items-center justify-between text-sm"
+                  >
+                    <AnimatedText text={t("settings.language")} />
+                    <AnimatedText text={i18n.language.toUpperCase()} />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="flex items-center justify-between text-sm"
+                  >
+                    <AnimatedText text={t("settings.theme")} />
                     <Sun className="h-4 w-4" />
-                  </div>
+                  </Button>
                 </div>
               </motion.div>
             )}

@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "intro": "Home",
+    "about": "About",
+    "project": "Projects",
+    "contact": "Contact"
+  },
+  "settings": {
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "intro": {
+    "greeting": "Hello, I'm",
+    "desc": "Hi! I'm a Web Developer who loves building clean, responsive, and modern websites. Passionate about technology, enthusiastic about the web world, and always excited to learn new things 🚀",
+    "projectButton": "View Projects",
+    "cvButton": "Download CV",
+    "badge": "Ready to Collaborate"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "desc1": "I am a Web Developer focused on building modern web applications with a structured, efficient, and user-centered approach. I have a strong interest in combining programming logic, UI/UX design, and data processing to create digital solutions that are not only functional, but also intuitive and comfortable to use.",
+    "desc2": "Throughout the development process, I am experienced in building responsive, scalable, and maintainable interfaces, as well as optimizing application performance to ensure speed and stability. I enjoy exploring new technologies and continuously improving product quality through best practices, collaboration, and ongoing evaluation.",
+    "experience": "Months Experience",
+    "techstack": "TECHNICAL SKILLS"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "desc": "Explore some of the best projects I've built as digital solutions, crafted with a modern, structured, and user-centered approach.",
+    "project1" : {
+      "title": "BaleTani",
+      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
+    },
+    "project2" : {
+      "title": "BaleTani",
+      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
+    },
+    "project3" : {
+      "title": "BaleTani",
+      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
+    },
+    "project4" : {
+      "title": "BaleTani",
+      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
+    },
+    "project5" : {
+      "title": "BaleTani",
+      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
+    }
+  },
+  "contact": {
+    "title": "Want To Collaborate?",
+    "cta": "Let's bring your digital project to life together. I'd be happy to collaborate and turn your ideas into a well-crafted digital solution. Get in touch today to discuss your goals, explore possibilities, and take the next step forward together.",
+    "mailButton": "Contact Me"
+  }
+}

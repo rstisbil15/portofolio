@@ -1,38 +1,40 @@
 import PageContainer from "../layout/PageContainer";
 import { Card } from "@/components/ui/card";
 import { easeOut, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { AnimatedText } from "@/components/animation/AnimatedText";
 
 const project1 = {
-  title: "BaleTani",
-  description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
+  title: "projects.project1.title",
+  description: "projects.project1.desc",
   image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project2 = {
-  title: "BaleTani",
-  description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
+  title: "projects.project2.title",
+  description: "projects.project2.desc",
   image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project3 = {
-  title: "BaleTani",
-  description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
+  title: "projects.project3.title",
+  description: "projects.project3.desc",
   image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project4 = {
-  title: "BaleTani",
-  description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
+  title: "projects.project4.title",
+  description: "projects.project4.desc",
   image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
 
 const project5 = {
-  title: "BaleTani",
-  description: "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian.",
+  title: "projects.project5.title",
+  description: "projects.project5.desc",
   image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }
@@ -71,6 +73,8 @@ const itemVariants = {
 };
 
 export default function Projects() {
+  const { t } = useTranslation()
+
   return (
     <section id="project" className="py-8 md:py-12">
       <PageContainer>
@@ -83,11 +87,10 @@ export default function Projects() {
           className="max-w-3xl space-y-2 md:space-y-3 mb-6 md:mb-8"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
-            Karya Pilihan
+            <AnimatedText text={t("projects.title")} />
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            Eksplorasi karya terbaik yang pernah saya bangun sebagai solusi digital
-            dengan pendekatan modern, terstruktur, dan berorientasi pada pengguna.
+            <AnimatedText text={t("projects.desc")} />
           </p>
         </motion.div>
 
@@ -125,10 +128,10 @@ export default function Projects() {
                 {/* project content */}
                 <div className="p-4 sm:p-5 space-y-2 sm:space-y-3">
                   <h3 className="font-semibold text-base sm:text-lg">
-                    {project.title}
+                    <AnimatedText text={t(project.title)} />
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    {project.description}
+                    <AnimatedText text={t(project.description)} />
                   </p>
                   {/* techstack */}
                   <div className="flex flex-wrap gap-2 pt-2">

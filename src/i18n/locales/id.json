@@ -28,23 +28,15 @@
     "desc": "Eksplorasi karya terbaik yang pernah saya bangun sebagai solusi digital dengan pendekatan modern, terstruktur, dan berorientasi pada pengguna.",
     "project1" : {
       "title": "BaleTani",
-      "desc": "Balétani adalah platform pasar segar online yang menyediakan hasil pertanian berkualitas tinggi langsung dari petani lokal ke rumah Anda. Dengan tagline 'Dari kebun ke Balé, dari Balé ke rumahmu', Balétani berkomitmen menyediakan produk segar dengan harga terjangkau."
+      "desc": "Balétani adalah platform pasar segar online yang menyediakan hasil pertanian berkualitas tinggi langsung dari petani lokal ke rumah."
     },
     "project2" : {
-      "title": "BaleTani",
-      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
+      "title": "Finova",
+      "desc": "Finova adalah solusi digital yang dirancang khusus untuk membantu pengguna dalam mengelola keuangan secara lebih cerdas, rapi, dan terstruktur."
     },
     "project3" : {
-      "title": "BaleTani",
-      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
-    },
-    "project4" : {
-      "title": "BaleTani",
-      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
-    },
-    "project5" : {
-      "title": "BaleTani",
-      "desc": "Fresh market management system untuk pengelolaan distribusi dan stok hasil pertanian."
+      "title": "Fibova Desktop App",
+      "desc": "Finova Desktop App adalah solusi cerdas untuk penganggaran keuangan individu dan organisasi."
     }
   },
   "contact": {

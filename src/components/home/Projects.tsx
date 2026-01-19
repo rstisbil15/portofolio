@@ -8,14 +8,14 @@ const project1 = {
   title: "projects.project1.title",
   description: "",
   image: "../../../baletani.jpg",
-  techStack: ["ReactJS", "NodeJS", "MySQL"],
+  techStack: ["ReactJS", "API", "MySQL","Tailwind CSS", "K6", "Cypress"],
 }
 
 const project2 = {
   title: "projects.project2.title",
   description: "projects.project2.desc",
   image: "../../../baletani.jpg",
-  techStack: ["ReactJS", "NodeJS", "MySQL"],
+  techStack: ["Vue", "Laravel", "MySQL","Tailwind CSS"],
 }
 
 const project3 = {
@@ -23,29 +23,13 @@ const project3 = {
   description: "projects.project3.desc",
   image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
-}
-
-const project4 = {
-  title: "projects.project4.title",
-  description: "projects.project4.desc",
-  image: "../../../baletani.jpg",
-  techStack: ["ReactJS", "NodeJS", "MySQL"],
-}
-
-const project5 = {
-  title: "projects.project5.title",
-  description: "projects.project5.desc",
-  image: "../../../baletani.jpg",
-  techStack: ["ReactJS", "NodeJS", "MySQL"],
-}
+};
 
 const projects = [
   project1,
   project2,
   project3,
-  project4,
-  project5,
-]
+];
 
 const containerVariants = {
   hidden: { opacity: 0 },

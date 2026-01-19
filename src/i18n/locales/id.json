@@ -32,10 +32,10 @@
     },
     "project2" : {
       "title": "Finova",
-      "desc": "Finova adalah solusi digital yang dirancang khusus untuk membantu pengguna dalam mengelola keuangan secara lebih cerdas, rapi, dan terstruktur."
+      "desc": "Finova (Finance & Innovation) adalah website budgeting berbasis AI yang membantu pengguna mengelola keuangan secara cerdas dan terstruktur, dengan fitur pencatatan pemasukan–pengeluaran, rekap keuangan bulanan, serta ekspor laporan ke format Excel."
     },
     "project3" : {
-      "title": "Fibova Desktop App",
+      "title": "Finova Desktop App",
       "desc": "Finova Desktop App adalah solusi cerdas untuk penganggaran keuangan individu dan organisasi."
     }
   },

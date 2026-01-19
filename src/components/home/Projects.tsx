@@ -6,7 +6,7 @@ import { AnimatedText } from "@/components/animation/AnimatedText";
 
 const project1 = {
   title: "projects.project1.title",
-  description: "projects.project1.desc",
+  description: "",
   image: "../../../baletani.jpg",
   techStack: ["ReactJS", "NodeJS", "MySQL"],
 }

@@ -28,23 +28,15 @@
     "desc": "Explore some of the best projects I've built as digital solutions, crafted with a modern, structured, and user-centered approach.",
     "project1" : {
       "title": "BaleTani",
-      "desc": "Balétani is an online fresh market platform that provides high-quality agricultural products directly from local farmers to your home. With the tagline 'From the garden to Balé, from Balé to your home', Balétani is committed to providing fresh products at affordable prices."
+      "desc": "Balétani is an online fresh produce marketplace that delivers high-quality agricultural products directly from local farmers to your home"
     },
     "project2" : {
-      "title": "BaleTani",
-      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
+      "title": "Finova",
+      "desc": "Finova (Finance & Innovation) is an AI-based budgeting website that helps users manage their finances intelligently and in a structured way, featuring income and expense tracking, monthly financial summaries, and report exports to Excel format."
     },
     "project3" : {
-      "title": "BaleTani",
-      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
-    },
-    "project4" : {
-      "title": "BaleTani",
-      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
-    },
-    "project5" : {
-      "title": "BaleTani",
-      "desc": "A fresh market management system designed to manage the distribution and inventory of agricultural products."
+      "title": "Finova Desktop App",
+      "desc": "Finova Desktop App is a smart solution for individual and organizational financial budgeting."
     }
   },
   "contact": {

@@ -22,7 +22,7 @@ const project3 = {
   title: "projects.project3.title",
   description: "projects.project3.desc",
   image: "../../../baletani.jpg",
-  techStack: ["ReactJS", "NodeJS", "MySQL"],
+  techStack: ["Netbeans", "SQL", "Java"],
 };
 
 const projects = [

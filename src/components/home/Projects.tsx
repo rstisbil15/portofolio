@@ -14,14 +14,14 @@ const project1 = {
 const project2 = {
   title: "projects.project2.title",
   description: "projects.project2.desc",
-  image: "../../../baletani.jpg",
+  image: "../../../finova.png",
   techStack: ["Vue", "Laravel", "MySQL","Tailwind CSS"],
 }
 
 const project3 = {
   title: "projects.project3.title",
   description: "projects.project3.desc",
-  image: "../../../baletani.jpg",
+  image: "../../../finova_desktop.png",
   techStack: ["Netbeans", "SQL", "Java"],
 };
 
